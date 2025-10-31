@@ -45,15 +45,15 @@ export default function DetailPage({ id, onBack }) {
 
           <div className="col-12 col-md-7">
             <p className="text-muted">{produto.descricao}</p>
-            <h2 className="fw-bold">{produto.preco}</h2>
             <p className="text-muted mb-1">{produto.especificacao}</p>
             <p className="text-muted">Fabricante: {produto.fabricante}</p>
+            <h2 className="fw-bold">{produto.preco}</h2>
             <button className="btn btn-dark">Comprar</button>
 
             <div className="mt-4">
               <CampoCep />
             </div>
-            
+
           </div>
         </div>
       </div>

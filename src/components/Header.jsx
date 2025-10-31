@@ -1,7 +1,7 @@
 import React from "react"
 import SearchBar from "./SearchBar"
 
-export default function Header(){
+export default function Header({ searchQuery, onSearchChange }){
     return(
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -24,7 +24,7 @@ export default function Header(){
                     </li>
                 </ul>
 
-                <SearchBar/>
+                <SearchBar value={searchQuery} onChange={onSearchChange} />
                 </div>
             </div>
         </nav>
