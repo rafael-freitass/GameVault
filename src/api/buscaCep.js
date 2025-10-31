@@ -1,4 +1,4 @@
-export async function buscarCep(cep){
+export default async function buscarCep(cep){
     const soDigitos = String(cep).replace(/\D/g, '');
     if (soDigitos.length !== 8) {
         throw new Error('CEP inválido: use 8 dígitos.');
