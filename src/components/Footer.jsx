@@ -1,4 +1,5 @@
 import React from "react"
+import logo from "../assets/logo.png"
 
 export default function Footer() {
   return (
@@ -7,10 +8,10 @@ export default function Footer() {
         
         <div className="d-flex align-items-center mb-3 mb-md-0">
           <img
-            src="..."
+            src={logo}
             alt="Logo GameVault"
-            width="40"
-            height="40"
+            width="100"
+            height="100"
             className="me-2"
           />
           <h5 className="mb-0">GameVault</h5>

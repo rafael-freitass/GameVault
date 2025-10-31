@@ -17,7 +17,7 @@ export default function CampoCep(){
     }
 
     return(
-        <div className="container mt-3 border">
+        <div className="container mt-3">
             <div className="d-flex align-items-center gap-2">
             <input 
                 type="text"
@@ -27,7 +27,7 @@ export default function CampoCep(){
                 inputMode="numeric"
                 autoComplete="postal-code"
                 />
-            <button className="btn btn-primary" onClick={handleBuscar}>Buscar CEP</button>
+            <button className="btn btn-sm btn-secondary" onClick={handleBuscar}>Buscar CEP</button>
 
             {endereco && !endereco.erro && (
                 <div>
