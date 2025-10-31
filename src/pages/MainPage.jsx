@@ -8,10 +8,21 @@ import VitrineGrid from "../components/VitrineGrid";
 export default function MainPage({onSelect}){
     return(
         <div>
-            <Header/>
-            <Carrossel/>
-            <VitrineGrid onSelect={onSelect}/>
-            <Footer/>
+            <div className="fixed-top">
+                <Header/>
+            </div>
+
+            <section id="inicio" style={{ scrollMarginTop: "80px", paddingTop: "16px" }}>
+                <Carrossel onSelect={onSelect}/>
+            </section>
+            
+            <section id="principal" style={{ scrollMarginTop: "80px", paddingTop: "16px" }}>
+                <VitrineGrid onSelect={onSelect}/>
+            </section>
+            
+            <section id="contato" style={{ scrollMarginTop: "80px", paddingTop: "16px" }}>
+                <Footer/>
+            </section>
         </div>
     )
 }

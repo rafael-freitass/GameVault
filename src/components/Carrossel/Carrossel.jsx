@@ -2,13 +2,12 @@ import React from "react";
 import './Carrossel.css';
 import games from '../../api/games';
 
-export default function Carrossel() {
+export default function Carrossel({ onSelect }) {
   const carouselId = "carouselSnes";
-
   const itens = games.filter(g => g.nome.includes("SNES"));
 
   return (
-    <section className="py-4">
+    <section className="py-5">
       <h2 className="text-center mb-3">Jogos de SNES na promoção</h2>
 
       <div
@@ -40,7 +39,7 @@ export default function Carrossel() {
               <div className="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-2">
                 <h5 className="mb-1">{item.nome}</h5>
                 <p className="mb-2 small">{item.descricao}</p>
-                <button className="btn btn-dark w-25">Comprar</button>
+                <button className="btn btn-dark w-25" onClick={() => onSelect(item.id)}>Comprar</button>
               </div>
             </div>
           ))}

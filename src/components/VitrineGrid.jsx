@@ -1,29 +1,26 @@
-import React from "react"
-import ProductCard from "./ProductCard";
-import games from '../api/games';
+import React from "react";
+import ProductCard from "./ProductCard/ProductCard";
+import games from "../api/games";
 
-export default function VitrineGrid({onSelect}){
-    const produtos = games;
+export default function VitrineGrid({ onSelect }) {
+  return (
+    <div className="container py-5">
+      <h2 className="text-center mb-4">Nossos Produtos</h2>
 
-    return(
-        <div className="container py-5">
-            <h2 className="text-center mb-4">Nossos Produtos</h2>
-            
-            <div className="row g-4 justify-content-center">
-                {produtos.map(produto => (
-                    
-                <div key={produto.id} className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                    <ProductCard
-                        onSelect={() => onSelect(produto.id)}
-                        img={produto.img}
-                        alt={produto.alt}
-                        nome={produto.nome}
-                        descricao={produto.descricao}
-                    />
-                </div>
-                ))}
-            </div>
-
-        </div>
-    )
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        {games.map((produto) => (
+          <div key={produto.id} className="col d-flex align-items-stretch">
+            <ProductCard
+              onSelect={() => onSelect(produto.id)}
+              img={produto.img}
+              alt={produto.alt}
+              nome={produto.nome}
+              descricao={produto.descricao}
+              preco={produto.preco}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
