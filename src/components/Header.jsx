@@ -1,7 +1,12 @@
 import React from "react"
 import SearchBar from "./SearchBar"
 
-export default function Header({ searchQuery, onSearchChange }){
+export default function Header({ searchQuery, onSearchChange, onOpenSobre }){
+    const handleSobreClick = (e) => {
+        e.preventDefault();
+        onOpenSobre?.();
+    };
+
     return(
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -20,7 +25,7 @@ export default function Header({ searchQuery, onSearchChange }){
                         <a className="nav-link" href="#contato">Contato</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Sobre</a>
+                        <a className="nav-link" href="#sobre" onClick={handleSobreClick}>Sobre</a>
                     </li>
                 </ul>
 

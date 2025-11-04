@@ -5,15 +5,16 @@ import Carrossel from "../components/Carrossel/Carrossel";
 import VitrineGrid from "../components/VitrineGrid";
 
 
-export default function MainPage({ onSelect }){
+export default function MainPage({ onSelect, onOpenSobre }){
     const [searchQuery, setSearchQuery] = useState("");
 
     return(
-        <div>
+        <>
             <div className="fixed-top">
                 <Header
                     searchQuery={searchQuery}
                     onSearchChange={setSearchQuery}
+                    onOpenSobre={onOpenSobre}
                 />
             </div>
 
@@ -28,6 +29,6 @@ export default function MainPage({ onSelect }){
             <section id="contato" style={{ scrollMarginTop: "80px", paddingTop: "16px" }}>
                 <Footer/>
             </section>
-        </div>
+        </>
     )
 }
