@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import Carrossel from "../components/Carrossel/Carrossel";
 import VitrineGrid from "../components/VitrineGrid";
 
-
 export default function MainPage({ onSelect, onOpenSobre }){
     const [searchQuery, setSearchQuery] = useState("");
 

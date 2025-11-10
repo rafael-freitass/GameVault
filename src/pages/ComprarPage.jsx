@@ -79,4 +79,4 @@ export default function ComprarPage({ id, onBack }) {
         <Footer />
         </main>
     );
-    }
+}

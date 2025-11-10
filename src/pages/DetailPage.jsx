@@ -9,8 +9,8 @@ export default function DetailPage({ id, onBack, onComprar }) {
   const produto = games.find(g => g.id === Number(id));
 
   const handleComprarClick = (e) => {
-    e?.preventDefault?.();          // seguro, caso não venha evento
-    onComprar?.(id);                // ou onComprar?.(produto?.id)
+    e?.preventDefault?.();
+    onComprar?.(id);
   };
   
   if (!produto) {
